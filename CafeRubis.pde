@@ -2,6 +2,7 @@ void setup()
 {
   size(800,600);
   loadData();
+  printProducts();
 }
 
 ArrayList<Product> products = new ArrayList<Product>();
@@ -16,6 +17,14 @@ void loadData()
   {
     Product product = new Product(r);
     products.add(product);
+  }
+}
+
+void printProducts()
+{
+  for(Product p:products)
+  {
+    println(p.name);
   }
 }
 
